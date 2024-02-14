@@ -1,0 +1,16 @@
+base_config:
+  - ./base.yaml
+
+raw_data_dir: 'data/raw/LJSpeech-1.1'
+processed_data_dir: 'data/processed/ljspeech'
+binary_data_dir: 'data/binary/ljspeech'
+
+task_cls: modules.ProDiff.task.ProDiff_task.ProDiff_Task
+
+
+# diffusion
+timesteps: 4
+teacher_ckpt: checkpoints/ProDiff_Teacher/model_ckpt_steps_200000.ckpt
+diff_decoder_type: 'wavenet'
+schedule_type: 'vpsde'
+
